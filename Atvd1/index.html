@@ -10,8 +10,8 @@
     <header>
       <h1 id="main_header">The piano Corner</h1>
       <nav>
-        <ul>
-          <li><a href="./index.html" class="Home">Home</a></li> 
+        <ul class="main_nav">
+          <li><a href="./index.html" class="active">Home</a></li> 
           <li><a href="./l_pieces.html" class="l_pieces">Learned Pieces</a></li> 
           <li><a href="./commentaries.html" class="commentaries">Commentaries</a></li> 
           <li><a href="./c_code.html" class="c_code">Cool Codes</a></li> 
@@ -20,54 +20,57 @@
       </nav>
     </header>
     <main>
-      <section>
-        <h2 class="site-header">Welcome to Marco Site
-        </h2>
-        <div class="about">
-          <h3>What is this about?
+      <!-- About -->
+      <section class="about">
+        <h2 class="cursive" id="site-header">Welcome to Marco Site</h2>
+          <h3 class="cursive title">What is this about?
           </h3>
+          <div class="about-content">
           <p>
-            Here a lot o things that I want to put. You'll have pieces that I'm practicing, pieces that I already know, recordings of my music and some blog stuff that I want to post. Most of the things won't be very interesting.
+            Here a lot of things that I want to put. You'll have pieces that I'm practicing, pieces that I already know, recordings of my music and some blog stuff that I want to post. Most of the things won't be very interesting.
           </p>
           <p>
-            Most of the time this will be empty, but maybe we will have some projects that I've done and things along those lines
+            Most of the time this will be empty, but maybe we will have some projects that I've done and things along those lines.
           </p>
-          <aside>
+          </div>
+          <aside class="commentary">
             Projects like Frank and Locus.
           </aside>
-        </div>
-        <div class="expectations">
-          <h3>What to expect?
+      </section>
+          <!-- Expectations -->
+        <section class="expectations">
+          <h3 class="cursive">What to expect?
           </h3>
+          <div class="expectations-content">
           <p>
             Don't expect a lot of great things, because there won't be a lot, but to heck if I'm not trying, at least.
           </p>
           <p>
             Sometimes things will be interesting, like some thoughts, feelings and things along those lines. Otherwise, it'll be a heck of a lot of nothing, but it's my heck of lot of nothing.
-        </p>
+          </p>
         </div>
       </section>
       <section class="piano_things">
         <div class="piano_desc">
-          <h2>Type of piano
+          <h2 class="cursive title">Type of piano
           </h2>
-          <p>The piano that I currently use is a Casio PX-870. Not the best, not the worst, not the best either
-          </p>.
+          <p>The piano that I currently use is a Casio PX-870. Not the best, not the worst, not the best either.
+          </p>
         </div>
         <div class="piano_pieces">
-          <h2>Pieces that I've learned
+          <h2 class="cursive title">Pieces that I've learned
           </h2>
-          <p>Here are some pieces that I've learned along my 8 years journey in to the piano. It isn't a very good for the time I've playing, but It's honest work.
+          <p>Here are some pieces that I've learned along my 8 years journey into the piano. It isn't very good for the time I've playing, but It's honest work.
           </p>
-          <table class="piano_pieces_learned">
-            <tr>
-              <th> Piece
+          <table id="piano_pieces_learned">
+            <tr class="table_header">
+              <th scope="col"> Piece
               </th>
-              <th> Composer
+              <th scope="col"> Composer
               </th>
-              <th> Date Started
+              <th scope="col"> Date Started
               </th>
-              <th> Date Learned
+              <th scope="col"> Date Learned
               </th>
             </tr>
             <tr>
@@ -110,18 +113,19 @@
               <td> 10/06/2025
               </td>
             </tr>
+            <caption>Table describing pieces that I've learned, their composers and start and end dates</caption>
           </table>
-          <h3>Why so slow?
+          <h3 class="cursive">Why so slow?
           </h3>
-          <p>I am really slow, and don't have much time to practice. So my progress is really slow, but my aim isn't to be a concert pianist, I am a hobbyst and as such, the real metric for my hapiness is myself. I'm happy, so that's what matter.
+          <p>I am really slow, and don't have much time to practice. So my progress is really slow, but my aim isn't to be a concert pianist, I am a hobbyist and as such, the real metric for my happiness is myself. I'm happy, so that's what matters.
           </p>
-          <aside>Maybe I do have time, I just don't know how to use it.
+          <aside class="commentary">Maybe I do have time, I just don't know how to use it.
           </aside>
         </div>
       </section>
       <section class="car_things">
         <div class="nuggets_div">
-          <h2>Nuggets That I like
+          <h2 class="cursive">Nuggets That I like
           </h2>
           In no order we have nuggets like:
           <ul class="nugget_list">
@@ -134,14 +138,14 @@
             <li>Fiat 500
             </li>
           </ul>
-          <aside>
+          <aside class="commentary">
             Tony Kobalski is a real powerhouse.
           </aside>
         </div>
-        <figure id="tiny_tony">
-          <img class="tinytony_img" src="./Figs/Tony.webp" alt="Glorious Tony, a fiat Maluch" id="tinytony">
+        <figure class="images">
+          <img id="tinytony_img" src="./Figs/Tony.webp" alt="Glorious Tony, a fiat Maluch">
           <figcaption class="FigCap">
-            The glorious Tony kowalski, the strongest Fiat Maluch that ever was
+            The glorious Tony Kobalski, the strongest Fiat Maluch that ever was
           </figcaption>
         </figure>
         <details>
@@ -150,13 +154,13 @@
           <p>
             If you see in
             <a href="https://www.youtube.com/@GarbageTime420" title="Visit Garbage Time"> in this absolute gem</a>
-            of a channel, that nuggets like Tony only recieve abuses, but Tony is strong, Tony survived everything.
+            of a channel, that nuggets like Tony only receive abuses, but Tony is strong, Tony survived everything.
           </p>
       </details>
       </section>
     </main>
     <footer>
-      <p clas="copyright"> Copyright Marco Túlio</p>
+      <p class="copyright"> Copyright Marco Túlio</p>
    </footer>
 </body>
 </html>
