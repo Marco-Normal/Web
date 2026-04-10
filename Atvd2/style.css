@@ -4,50 +4,228 @@
     box-sizing: border-box;
 }
 
-#selecao_refri {
-    display: flex;
-    flex-direction: column;
-    gap: 0.3em;
-    padding: 2rem;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
 }
 
-li {
-    border: 2px solid deepskyblue;
-    border-radius: 0.3em;
-    list-style: none;
-    text-align: center;
-    font-size: 2em
-}
 header {
     text-align: center;
     font-weight: bold;
     font-size: 2em;
+    margin-bottom: 20px;
 }
 
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 0.2em;
+    gap: 20px;
 }
 
-h2 {
+/* Soda Panel */
+.soda-panel {
+    background-color: white;
+    border: 2px solid black;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.soda-panel h2 {
     text-align: center;
-    padding: 4px;
+    margin-bottom: 10px;
 }
 
-#machine {
-    display: grid;
-    grid-template-columns: 1fr 2fr 2fr 1fr;
-    grid-template-areas:
-        "machine machine machine machine"
-        "glass glass glass glass";
-    grid-template-rows: auto;
+#selecao_refri {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+}
+
+#selecao_refri li {
     border: 2px solid blue;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #e8e8e8;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
 }
 
-#machine-body {
-    grid-area: machine;
-    background-color: red;
-    border: 2px solid black
+.soda-img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
 }
 
+#selecao_refri li:hover {
+    background-color: #d0d0ff;
+}
+
+#selecao_refri li.selected {
+    background-color: blue;
+    color: white;
+}
+
+.info-box {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: yellow;
+    border: 2px solid orange;
+    text-align: center;
+    font-weight: bold;
+}
+
+.selected-soda-img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-top: 8px;
+}
+
+/* Vending Machine */
+#machine {
+    background-color: gray;
+    border: 3px solid black;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#machine-display {
+    background-color: black;
+    border: 2px solid #333;
+    padding: 15px;
+    text-align: center;
+}
+
+#money-display {
+    font-size: 1.5em;
+    color: greenyellow;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#status-message {
+    min-height: 25px;
+    color: red;
+    font-weight: bold;
+}
+
+.dispensed-img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-top: 10px;
+}
+
+/* Coin Drop Zone */
+.drop-zone {
+    background-color: brown;
+    border: 3px dashed gold;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.drop-zone.drag-over {
+    background-color: #8b6914;
+}
+
+/* Coins Area */
+#coins-area {
+    background-color: #555;
+    padding: 15px;
+    color: white;
+}
+
+#coins-area h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.coins-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.moeda {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: grab;
+    border: 2px solid #333;
+}
+
+#coin-1 {
+    background-color: gold;
+}
+
+#coin-05 {
+    background-color: silver;
+}
+
+#coin-025 {
+    background-color: #cd7f32;
+    color: white;
+}
+
+.moeda.dragging {
+    opacity: 0.5;
+}
+
+/* Change Area */
+#change-area {
+    background-color: lightgreen;
+    border: 2px solid green;
+    padding: 10px;
+    text-align: center;
+}
+
+#change-area h3 {
+    margin-bottom: 5px;
+}
+
+#change-amount {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: green;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Buy Button */
+#buy-btn {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 1.3em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#buy-btn:hover:not(:disabled) {
+    background-color: darkgreen;
+}
+
+#buy-btn:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}

@@ -1,32 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividade 1</title>
+    <title>Máquina de Refrigerante</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <header>
-      <h1>Máquina de refrigerante</h1>
+      <h1>Máquina de Refrigerante</h1>
     </header>
+
     <div class="grid-container">
-      <div>
-        <section id="secao_refri">
-          <h2>Escolha aqui seu refrigerante</h2>
-          <ul id="selecao_refri">
-            <li> Teste1 </li>
-            <li>Test2</li>
-            <li>Test3</li>
-          </ul>
-        </section>
-      </div>
-      <div id="machine">
-        <div id="machine-body">
-          <p> hello </p>
+      <!-- Soda Selection Panel -->
+      <div class="soda-panel">
+        <h2>Escolha seu Refrigerante</h2>
+        <ul id="selecao_refri">
+          <!-- Sodas will be loaded here from API -->
+        </ul>
+        <div id="selected-soda" class="info-box">
+          <span>Nenhum refrigerante selecionado</span>
         </div>
       </div>
-      <!-- <script src="refri.js" defer></script> -->
+
+      <!-- Vending Machine -->
+      <div id="machine">
+        <div id="machine-display">
+          <div id="money-display">
+            <span>Total inserido: R$ </span>
+            <span id="total-inserted">0.00</span>
+          </div>
+          <div id="status-message"></div>
+        </div>
+
+        <!-- Coin Drop Zone -->
+        <div id="coin-slot" class="drop-zone">
+          <p>Arraste moedas aqui</p>
+        </div>
+
+        <!-- Coins Section -->
+        <div id="coins-area">
+          <h3>Moedas Disponíveis</h3>
+          <div class="coins-container">
+            <div class="moeda" id="coin-1" draggable="true" data-value="1.00">
+              <span>R$ 1,00</span>
+            </div>
+            <div class="moeda" id="coin-05" draggable="true" data-value="0.50">
+              <span>R$ 0,50</span>
+            </div>
+            <div class="moeda" id="coin-025" draggable="true" data-value="0.25">
+              <span>R$ 0,25</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Change Display -->
+        <div id="area-troco" class="hidden">
+          <h3>Troco</h3>
+          <div id="valor-troco"></div>
+        </div>
+
+        <!-- Buy Button -->
+        <button id="buy-btn" disabled>Comprar Refrigerante</button>
+      </div>
     </div>
+
+    <script src="refri.js"></script>
+    <script src="drag_drop.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
