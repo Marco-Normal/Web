@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#selecao_refri {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+    padding: 2rem;
+}
+
+li {
+    border: 2px solid deepskyblue;
+    border-radius: 0.3em;
+    list-style: none;
+    text-align: center;
+    font-size: 2em
+}
+header {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 0.2em;
+}
+
+h2 {
+    text-align: center;
+    padding: 4px;
+}
+
+#machine {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-areas:
+        "machine machine machine machine"
+        "glass glass glass glass";
+    grid-template-rows: auto;
+    border: 2px solid blue;
+}
+
+#machine-body {
+    grid-area: machine;
+    background-color: red;
+    border: 2px solid black
+}
+
